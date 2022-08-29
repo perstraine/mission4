@@ -12,9 +12,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Install Dependencies
-        - run: npm i
+        run: npm i
       - name: Run Tests
-        run: num run test
+        run: npm run test
       - name: Build
         run: npm run build
 
