@@ -11,3 +11,86 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.turners-logo {
+  margin: auto;
+  margin-right: 40px;
+  color: white;
+  font-family:fantasy ;
+  font-size: 26px;
+}
+
+
+.turners-side {
+  margin:auto;
+  padding-right: 5px;
+  height: 40px;
+}
+
+.nav {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: rgb(24, 104, 195);
+  color: rgb(255, 255, 255);
+  display: flex;
+  padding: 0 2rem;/*vertical | horizontal*/
+  align-items: stretch; /* enables nav a elements to stretch full height of nav bar */
+  /* next 3 lines keeps nav bar fixed on top of screen
+  while scrolling, maintaining full width of screen
+  and removes space above the navbar */
+  width: 100%;
+  top: 0%;
+  position: fixed;
+  z-index: 1000;
+}   
+
+.nav li {
+  display: flex;
+  font-size: 1.5rem;
+  padding: 1rem;
+
+}
+
+/* .nav-login {
+  background-color: black;
+  display: flex;
+  font-size: 1.5rem;
+  padding: 1rem;
+  border-style:solid;
+  margin: 1px
+
+} */
+
+/* .nav-login:hover {
+  cursor: pointer;
+  background: #777;
+  transition: all .55s ease-in-out;
+
+
+} */
+
+.nav ul {
+  margin: 0;
+  list-style: none;
+  display: flex;
+  padding: 0 0rem;
+}
+
+/*Select anchor tags to make links show up*/
+.nav a {
+  color: inherit; /* Inherits color of both active and inactive menu links, red for active, white inactive*/
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+
+}
+/* this order for nav li is important for hover effect to work on an active element */
+.nav li.active {
+  color: red;
+  transition: all .5s ease-in-out;
+}
+
+.nav li:hover {
+  background: rgb(13, 0, 255);
+  transition: all .55s ease-in-out;
+ 
+}
