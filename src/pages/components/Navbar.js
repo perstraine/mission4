@@ -7,9 +7,10 @@ export default function Navbar() {
     return (
         <nav className="nav">
             <ul>
-                <img src={image} alt="" className="turners-side"/>
-                <h1 className="turners-logo">Turners Cars</h1>
+
                 <BrowserRouter>
+                    <Link to="/"><img src="https://www.turners.co.nz/contentassets/3e15c8546917474ca0a150b18e9fd64e/turnerscars_logo_1line_horz_true-rgb-desktop.png"
+                        alt="" className="turners-side" /></Link>
                     <CustomLink to="/">Home</CustomLink>
                     <CustomLink to="/search">Search</CustomLink>
                 </BrowserRouter>

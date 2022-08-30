@@ -1,0 +1,116 @@
+.carousel {
+    /* hides overflow content, so only active item is visible */
+    overflow: hidden; 
+    position: relative;
+    top: 62px;
+    width: 80%;
+    margin: auto;
+    
+}
+
+/* line 9: keeps items in 1 line, prevents the default behaviour of breaking into a new line
+   line 10:  transition animation time*/
+.inner {
+    white-space: nowrap;
+    transition: transform 0.3s;
+
+}
+/* Carousel item styling */
+.carousel-item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 165px;
+    background-color: #000;
+    color: #fff;
+    width: 100%;
+}
+
+.indicators {
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+    padding: 5px;
+}
+
+.indicators > button {
+    margin:  5px;
+    border-radius: 50%;
+    opacity: 66%;
+    width: 12px;
+    height: 12px;
+    background: white;
+    border: none;
+    position: relative;
+    bottom: 40px;
+    font-display: none;
+}
+
+
+.indicators > .previous {
+    margin:  5px;    
+    opacity: 100%;
+    position: absolute;
+    border: none;
+    background: none;
+    transform: scaleX(-1);
+    height: 85%;
+    left: 7%;
+    border-radius: 0%;
+
+}
+
+.indicators > .next {
+    margin:  5px;    
+    opacity: 100%;
+    position: absolute;
+    border: none;
+    background: none;
+    height: 85%;
+    right: 7%;
+}
+
+.indicators > button.active {
+    background: red;
+    opacity: 100%;
+}
+
+@media screen and (max-width: 1450px){
+    
+    .carousel {
+        width: 100%;
+    }
+
+    .indicators > .next {
+        margin-right: 12px;
+    }
+
+    .indicators > .previous {
+        margin-left: 12px;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    
+    .indicators > .next {
+        margin-right: 25px;
+    }
+
+    .indicators > .previous {
+        margin-left: 25px;
+    }
+}
+@media screen and (max-width: 850px){
+    
+    .carousel {
+        width: 100%;
+    }
+
+    .indicators > .next {
+        visibility: hidden;
+    }
+
+    .indicators > .previous {
+        visibility: hidden;
+    }
+}
