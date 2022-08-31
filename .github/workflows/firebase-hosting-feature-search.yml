@@ -5,7 +5,9 @@ name: Deploy to Firebase Hosting on merge
 'on':
   push:
     branches:
-      - feature/search
+      - feature/*
+env:
+  CI: false
 jobs:
   test_and_build:
     runs-on: ubuntu-latest
