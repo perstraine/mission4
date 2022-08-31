@@ -1,4 +1,4 @@
-const removePunct = require('./removepunct.js');
+import removePunct from './removepunct'
 
 const testCases = [
   "hello world",
@@ -11,19 +11,34 @@ const testCases = [
 const expected = 'hello world'
 
 
+// describe("Punctuation tests", () => {
+//   for (let i = 0; i < testCases.length; i++) {
+//     it(`removes puncts from ${testCases[i]}`, () => {
+//       //Arrange
+//       const input = testCases[i];
+
+//       //Act
+//       const actual = removePunct(input)
+
+//       //Assert
+//       expect(actual).toBe(expected);
+//     });
+//   }
+// });
+
 describe("Punctuation tests", () => {
-  for (let i = 0; i < testCases.length; i++) {
-    it(`removes puncts from ${testCases[i]}`, () => {
+  testCases.map((testCase)=> {
+    it(`removes puncts from ${testCase}`, () => {
       //Arrange
-      const input = testCases[i];
+      const input = testCase;
 
       //Act
-      const actual = removePunct(input)
+      const actual = removePunct(input);
 
       //Assert
       expect(actual).toBe(expected);
     });
-  }
+  })
 });
 
 // describe("Punctuation tests", () => {
