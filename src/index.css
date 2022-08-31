@@ -12,15 +12,6 @@ code {
     monospace;
 }
 
-.turners-logo {
-  margin-top: 10px;
-  margin-right: 40px;
-  color: white;
-  font-family:fantasy ;
-  font-size: 26px;
-}
-
-
 .turners-side {
   margin:auto;
   padding-right: 50px;
@@ -124,4 +115,48 @@ body {
   background-color: white;
   margin: 0 10%;
   padding: 5px 0;
+}
+
+@media screen and (max-width: 600px){
+  
+  .nav {
+    background: linear-gradient(
+    90deg,    
+    white 32%,
+    rgb(24, 117, 217) 45%
+  );
+  }
+
+  .nav li {
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width: 500px){
+  
+  .nav {
+    background: linear-gradient(
+    90deg,    
+    white 40%,
+    rgb(24, 117, 217) 55%
+  );
+  }
+
+}
+
+@media screen and (max-width: 400px){
+  
+  .nav {
+    background: linear-gradient(
+    90deg,    
+    white 0%,
+    rgb(24, 117, 217) 55%
+  );
+  }
+
+  .turners-side {
+    margin: auto;
+    align-self: center;
+  }
+
 }

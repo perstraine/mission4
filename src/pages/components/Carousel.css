@@ -23,7 +23,7 @@
     min-height: 165px;
     background-color: #000;
     color: #fff;
-    width: 100%;
+    width: 90%;
 }
 
 .indicators {
@@ -114,3 +114,4 @@
         visibility: hidden;
     }
 }
+

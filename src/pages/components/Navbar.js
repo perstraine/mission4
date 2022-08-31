@@ -1,5 +1,4 @@
 import { Link, useMatch, useResolvedPath, BrowserRouter } from "react-router-dom"
-import image from './turners.png'
 /* Link component replaces a(anchor) tags, then href
 is replaced with to */
 
