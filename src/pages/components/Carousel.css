@@ -2,14 +2,14 @@
     /* hides overflow content, so only active item is visible */
     overflow: hidden; 
     position: relative;
-    top: 62px;
-    width: 80%;
+    width: 100%;
     margin: auto;
     
 }
 
-/* line 9: keeps items in 1 line, prevents the default behaviour of breaking into a new line
-   line 10:  transition animation time*/
+
+/* line 15: keeps items in 1 line, prevents the default behaviour of breaking into a new line
+   line 16:  transition animation time*/
 .inner {
     white-space: nowrap;
     transition: transform 0.3s;
@@ -73,6 +73,20 @@
 .indicators > button.active {
     background: red;
     opacity: 100%;
+}
+
+.carousel-titles {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    margin: 0 10%;
+    padding: 0 4rem;
+}
+
+.two-carousels {
+    display: inline-flex;
+    position: relative;
+    
 }
 
 @media screen and (max-width: 1450px){

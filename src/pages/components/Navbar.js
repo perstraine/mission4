@@ -1,4 +1,4 @@
-import { Link, useMatch, useResolvedPath, BrowserRouter } from "react-router-dom"
+import { Link, useMatch, useResolvedPath } from "react-router-dom"
 /* Link component replaces a(anchor) tags, then href
 is replaced with to */
 
@@ -6,13 +6,10 @@ export default function Navbar() {
     return (
         <nav className="nav">
             <ul>
-
-                <BrowserRouter>
-                    <Link to="/"><img src="https://www.turners.co.nz/contentassets/3e15c8546917474ca0a150b18e9fd64e/turnerscars_logo_1line_horz_true-rgb-desktop.png"
-                        alt="" className="turners-side" /></Link>
-                    <CustomLink to="/">Home</CustomLink>
-                    <CustomLink to="/search">Search</CustomLink>
-                </BrowserRouter>
+                <Link to="/"><img src="https://www.turners.co.nz/contentassets/3e15c8546917474ca0a150b18e9fd64e/turnerscars_logo_1line_horz_true-rgb-desktop.png"
+                    alt="" className="turners-side" /></Link>
+                <CustomLink to="/">Home</CustomLink>
+                <CustomLink to="/search">Search</CustomLink>
             </ul>
         </nav>
     )
