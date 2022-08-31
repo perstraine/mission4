@@ -11,3 +11,171 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.turners-side {
+  margin:auto;
+  padding-right: 50px;
+  height: 60px;
+
+}
+
+.socials {
+  margin:auto;
+  padding:0 40px;
+  height: 50px;
+
+}
+
+.nav {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background: linear-gradient(
+    90deg,    
+    white 13%,
+    rgb(24, 117, 217) 20%
+  );
+  color: rgb(255, 255, 255);
+  display: flex;
+  padding: 0 2rem;/*vertical | horizontal*/
+  align-items: stretch; /* enables nav a elements to stretch full height of nav bar */
+  /* next 3 lines keeps nav bar fixed on top of screen
+  while scrolling, maintaining full width of screen
+  and removes space above the navbar */
+  width: 100%;
+  height: 60px;
+  top: 0%;
+  position: fixed;
+  z-index: 1000;
+}   
+
+.nav li {
+  display: flex;
+  font-size: 1.5rem;
+  padding: 1rem;
+
+}
+
+/* .nav-login {
+  background-color: black;
+  display: flex;
+  font-size: 1.5rem;
+  padding: 1rem;
+  border-style:solid;
+  margin: 1px
+
+} */
+
+/* .nav-login:hover {
+  cursor: pointer;
+  background: #777;
+  transition: all .55s ease-in-out;
+
+
+} */
+
+.nav ul {
+  margin: 0;
+  list-style: none;
+  display: flex;
+  padding: 0 0rem;
+}
+
+/*Select anchor tags to make links show up*/
+.nav a {
+  color: inherit; /* Inherits color of both active and inactive menu links, red for active, white inactive*/
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+
+}
+/* this order for nav li is important for hover effect to work on an active element */
+.nav li.active {
+  color: red;
+  transition: all .5s ease-in-out;
+}
+
+.nav li:hover {
+  background: rgb(13, 0, 255);
+  transition: all .55s ease-in-out;
+ 
+}
+
+h1 {
+  text-align: center;
+  padding-top: 10px;
+}
+
+h2 {
+  margin: 0 2%;
+  padding: 15px 0;
+}
+
+p {
+  margin: 0 2%;
+}
+
+
+body {
+  background-color: grey;
+}
+
+.home-content {
+  background-color: white;
+  margin: 0 10%;
+  padding: 1px 0;
+  top: 62px;
+  position: relative;
+}
+
+.footer {
+  background-color:  rgb(24, 117, 217);
+  position: relative;
+  display: flex;
+  color: white;
+  padding-left: 5%;
+}
+
+@media screen and (max-width: 600px){
+  
+  .nav {
+    background: linear-gradient(
+    90deg,    
+    white 32%,
+    rgb(24, 117, 217) 45%
+  );
+  }
+
+  .nav li {
+    visibility: hidden;
+  }
+}
+
+
+
+@media screen and (max-width: 500px){
+  
+  .nav {
+    background: linear-gradient(
+    90deg,    
+    white 40%,
+    rgb(24, 117, 217) 55%
+  );
+  }
+
+}
+
+@media screen and (max-width: 400px){
+  
+  .nav {
+    background: linear-gradient(
+    90deg,    
+    white 0%,
+    rgb(24, 117, 217) 55%
+  );
+  }
+
+  .turners-side {
+    margin: auto;
+    align-self: center;
+  }
+
+}
