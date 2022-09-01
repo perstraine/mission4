@@ -1,4 +1,4 @@
-import removePunct from './removepunct'
+import removePunct from './pages/components/removepunct'
 
 const testCases = [
   "hello world",

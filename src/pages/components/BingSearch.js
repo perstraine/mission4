@@ -3,15 +3,13 @@
 import React, { useState } from "react";
 import Axios from "axios";
 import removePunct from "./removepunct";
+import Results from "./Results";
+import "./BingSearch.css"
 
 const BingSearch = () => {
 	const [searchResults, setSearchResults] = useState(null);
 	const [notFound, setNotFound] = useState(false);
-
 	const [inputQuery, setInputQuery] = useState("");
-	const [address, setAddress] = useState("");
-	const [webPageName, setWebPageName] = useState("");
-	const [snippet, setSnippet] = useState("");
 
 	// takes search box input, removes punctuation and assigns to inputQuery variable,
 	//   ready to be searched
@@ -34,37 +32,43 @@ const BingSearch = () => {
 			console.log("OVER HERE", data.webPages.value);
 			if ("webPages" in data) {
 				setSearchResults(data.webPages.value);
-
-				setAddress(data.webPages.value[0].url);
-				setSnippet(data.webPages.value[0].snippet);
-				setWebPageName(data.webPages.value[0].name);
 			} else {
 				setNotFound(true);
 			}
-			console.log(webPageName);
-			console.log(searchResults);
-			console.log(notFound);
-			console.log(address);
 		} catch (error) {
 			console.log(error);
 		}
 	};
 	return (
-		<div>
-			<form action="" onSubmit={handleSearch} className={notFound ? "not-found" : "search-form"}>
-				<input type="text" onChange={handleChange} id="search-bar-input" placeholder="Search Our FAQs" />
-				<button id="submit-btn">Search</button>
-			</form>
-			<div>
-				<h1>Search</h1>
+    <div id = 'BS'>
+      <div id="BSplaceholder">
+        <div id='BStitle'>Search</div>
+        <div id='BSsubtitle'>Find the location of the information you need from Turners</div>
+        <form action="" onSubmit={handleSearch}>
+          <input
+            type="text"
+            onChange={handleChange}
+						placeholder="Search Our FAQs"
+						id="BSinput"
+          />
+          <button id="BSsubmit">Search</button>
+        </form>
+      </div>
 
-				<a href={address}>
-					<h3>{webPageName}</h3>{" "}
-				</a>
-				<p>{address}</p>
-				<p>{snippet}</p>
-			</div>
-		</div>
-	);
+      <div id="BSresults">
+        {searchResults &&
+          searchResults.map((result, index) => {
+            return (
+              <Results
+                address={result.url}
+                name={result.name}
+					snippet={result.snippet}
+					index={index}
+              ></Results>
+            );
+          })}
+      </div>
+    </div>
+  );
 };
 export default BingSearch;

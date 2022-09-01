@@ -1,8 +1,10 @@
-import { Link } from "react-router-dom";
+import BingSearch from "./components/BingSearch";
 
 export default function Search() {
-    return (<div>
-        Search Page
-        <Link to="/">Home</Link>
-    </div>);
+    return (
+      <>
+            <div>Search Page</div>
+            <BingSearch/>
+      </>
+    );
 }
