@@ -1,0 +1,37 @@
+#BS{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#BSplaceholder{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    width: 100%;
+    background: linear-gradient(0deg, rgba(24,117,217,1) 0%, rgba(97,168,244,1) 40%, rgba(97,168,244,1) 60%, rgba(24,117,217,1) 100%);
+}
+
+#BStitle{
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#BSsubtitle{
+    padding-bottom: 15px;
+}
+
+#BSinput{
+    font-size: 20px;
+}
+
+#BSsubmit{
+    margin-left: 3px;
+    font-size: 20px;
+}
+
+#BSresults{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
